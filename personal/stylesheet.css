@@ -1,0 +1,58 @@
+body {
+	color: green;
+	font-family: verdana, Arial, Geneva, Arial Black;
+	/*font-weight: bolder;*/
+	/*background-color: lime;*/
+	background-color: rgb(100, 120, 200);
+}
+
+h2 {
+	background-color: white;
+	color: blue;
+	border-bottom: 1px solid red;
+
+	/*font-size: 20px;*/
+	/*font-family: Arial;*/
+}
+
+
+
+/* Add CSS ????? / Define a class */
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+
+.underline {
+	text-decoration: underline;
+}
+
+.fontweight: {
+	/*lighter, normal, bold, bolder*/
+	font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
