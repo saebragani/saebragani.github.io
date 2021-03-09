@@ -1,0 +1,181 @@
+.proj-sidenav {
+  float: left;
+  margin-top: 60px;
+  width: 15%;
+  height: 100%;
+  /* border: double; */
+  border-width: 5px;
+  position: fixed;
+  background-image: url(./images/d1.JPG);
+}
+
+.proj-main {
+  float: left;
+  margin-top: 60px;
+  margin-left: 15%;
+  width: 85%;
+  /* border: double; */
+  height: 1000px;
+}
+
+.proj-sidenav a {
+  margin: 25px 10px;
+  padding: 30px 30px;
+  background-color: white;
+  text-align: center;
+  display: block;
+  border-radius: 10px;
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.proj-sidenav a:hover {
+  background-color: rgb(136, 136, 136);
+  transition: 0.8s;
+}
+/* ################################################# */
+.proj-main-row1 {
+  height: 1080px;
+  /* border: solid; */
+  /* border-color: red; */
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.proj-main-row1-left {
+  float: left;
+  width: 60%;
+  /* border: double; */
+  /* border-color: blue; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+.proj-main-row1-right {
+  float: left;
+  width: 40%;
+  /* border: solid; */
+  /* border-color: green; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 23px;
+}
+/* ################################################# */
+.proj-main-row2 {
+  height: 1110px;
+  /* border: solid;
+  border-color: red; */
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.proj-main-row2-left {
+  float: left;
+  width: 60%;
+  /* border: double;
+  border-color: blue; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+.proj-main-row2-right {
+  float: left;
+  width: 40%;
+  /* border: solid;
+  border-color: green; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 23px;
+}
+/* ################################################# */
+.proj-main-row3 {
+  height: 920px;
+  /* border: solid;
+  border-color: red; */
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.proj-main-row3-left {
+  float: left;
+  width: 60%;
+  /* border: double;
+  border-color: blue; */
+  height: 95%;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+.proj-main-row3-right {
+  float: left;
+  width: 40%;
+  /* border: solid;
+  border-color: green; */
+  height: 95%;
+  padding-left: 7%;
+  font-size: 23px;
+}
+
+/* ################################################# */
+.proj-main-row4 {
+  height: 1000px;
+  /* border: solid;
+  border-color: red; */
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+.proj-main-row4-left {
+  float: left;
+  width: 60%;
+  /* border: double;
+  border-color: blue; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 20px;
+}
+
+.proj-main-row4-right {
+  float: left;
+  width: 40%;
+  /* border: solid;
+  border-color: green; */
+  height: 90%;
+  padding: 0px 10px;
+  font-size: 23px;
+}
+
+.proj-main-row4-left img {
+  margin-left: 10%;
+}
+/* ################################################# */
+.proj-main-row5 {
+  height: 1000px;
+  border: solid;
+  border-color: red;
+}
+
+.proj-main-row5-left {
+  float: left;
+  width: 60%;
+  border: double;
+  border-color: blue;
+  height: 80%;
+  padding: 0px 10px;
+  font-size: 23px;
+}
+
+.proj-main-row5-right {
+  float: left;
+  width: 40%;
+  border: solid;
+  border-color: green;
+  height: 80%;
+  padding: 0px 10px;
+  font-size: 23px;
+}

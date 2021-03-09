@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saeb Ragani Portfolio</title>
+    <meta
+      name="Saeb Ragani Portfolio"
+      ,
+      content="saeb, ragani, lamooki, data science, machine learning, signal processing"
+    />
+    <meta http-equiv="author" content="Saeb Ragani" />
+    <meta http-equiv="content-language" , content="en-us" />
+    <link rel="stylesheet" type="text/css" href="/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+    <link rel="stylesheet" type="text/css" href="/css/lightbox.min.css" />
+    <script src="/js/lightbox-plus-jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/about-me/about-me.html">About Me</a>
+      <a href="/projects/projects.html">Projects</a>
+      <a href="/contact/contact.html">Contact Me</a>
+    </div>
+
+    <div class="proj-sidenav">
+      <a href="#HAR">Activity Recognition</a>
+      <a href="#hotelling">Gait Analysis T<sup>2</sup> </a>
+      <a href="#EWMA">Gait Analysis EWMA</a>
+      <a href="#posture">Posture in Palletizing</a>
+      <a href="#fairness"
+        >Fairness in <br />
+        ML</a
+      >
+    </div>
+
+    <div class="proj-main">
+      <!-- ################################################# HAR -->
+      <div class="proj-main-row1">
+        <h1 id="HAR">Human Activity Recognition</h1>
+        <div class="proj-main-row1-left">
+          <p style="font-size: 30px; font-weight: bold">
+            <a
+              href="https://github.com/saebragani/Activity-Recognition"
+              target="blank"
+              >Github Link</a
+            >
+          </p>
+          <p>
+            Human Activity Recognition (HAR) is used in a plethora of
+            applications such as activities of daily living to predict the
+            undertaken task using the data from wearable sensors. The research
+            however been less concentrated on industrial applications. In a
+            research that was funded by General Electric (GE), using a set of
+            prepeiotory wearable sensors we collected data from a 40
+            participants to simulate the activities of electric line workers.
+            Ten activities were included in this study which were rather more
+            complex than the one included in most of the HAR literature.
+          </p>
+          <p>
+            As a more challenging task we tried to classify the 10 activities in
+            our experiments using the data from a single accelerometer on the
+            participant's dimonant wrist. We the effect of different features
+            from the 3 domains i.e. time, frequeny, and time-frequency. Using a
+            fixed length sliding window approach we further investigated the
+            effect of 2 window sizes. As the simplest approach the time features
+            were calculated as 10 statistical measures from the original X, Y,
+            and Z acceleration signals in time domain. The frequency features
+            are the Fourier coefficients calculated using the FFT approach. For
+            the time-frequency domain we used the wevalet transform, using the
+            filter bank approach. Using Daubechies mother wavelet (db4) the
+            approximation and detail coefficients were obtained up to the
+            maximum possible level.Next, we obtained 12 statistics from the last
+            approximation and all detail coefficients and used them as the input
+            features for the classifiers.
+          </p>
+          <p>
+            Also, we investigated the performance of multiple classifiers
+            including Multi Layaer Perceptron (MLP), basic Recurrent Neural
+            Networks (RNN), Long Short Term Memory Metworks (LSTM),
+            <i>k</i>-NN, SVM, and rnadom forest. The deep learning techniques
+            were implemented using TensorFlow python and the conventional
+            classifiers were implemented using the Scikit-learn package in
+            python. We observed a better performance for the combination of
+            time-frequency features with the SVM classifier. Moreover, longer
+            window lengths resulted in better classification performance as we
+            expected.
+          </p>
+          <p>
+            Many classifiers that show excellent performnce in the data in the
+            laboratory settings fail to perform similarly when launched. The
+            interpretable machine learning techniques try to address this issue
+            by evaluating the relevance of the features. In an effort to
+            evaluate the relevance of the data that lead to the predictions we
+            exploited the Local Interpretable Model-agnostic Explanations (LIME)
+            method to find the important features for the prediction of
+            different classes. Using the selected features in the frequency and
+            time-frequency domains, we reconstructed the signals to provide
+            insights about whether the perodicity, the non-stationary component,
+            or the dispersion in the signals contributed to the predicted label.
+          </p>
+          <p>
+            <b
+              >This work is being prepared to be submitted to the
+              <u>IISE</u> journal.</b
+            >
+          </p>
+        </div>
+        <div class="proj-main-row1-right">
+          <p style="text-align: center; font-size: 17px">
+            The collected signal from a sample participant and the transition
+            points.
+          </p>
+          <a href="./images/allLabeled.png" data-lightbox="mygallery">
+            <img src="./images/allLabeled.png" alt="" width="100%"
+          /></a>
+          <br /><br />
+          <p style="text-align: center; font-size: 17px">
+            Sample windows of 10 seconds for each of the 10 activities.
+          </p>
+          <a href="./images/allAccSignals.png" data-lightbox="mygallery">
+            <img src="./images/allAccSignals.png" alt="" width="100%" />
+          </a>
+        </div>
+        <hr />
+      </div>
+      <!-- ################################################# Hotellings T2 -->
+      <div class="proj-main-row2">
+        <h1 id="hotelling">Hotelling's T<sup>2</sup> for Gait Analysis</h1>
+        <div class="proj-main-row2-left">
+          <p style="font-size: 30px; font-weight: bold">
+            <a href="./gait_monitoring_hotelling.html" , target="blank"
+              >Code and R-Markdown</a
+            >
+          </p>
+          <p>
+            Gait analysis is used for multiple purposes including for diagnosis,
+            intervention, and monitoring of gait patterns in patients with
+            diseases that adversely affect the gait such as Parkinson's disease
+            patients and stroke survivors. It is also important for ergonomic
+            assessment of the industrial workers in physically challenging
+            occupations such as warehousing. While in conventional approaches
+            the gait evaluation was performed as visual inspection by experts,
+            the advent of wearable technology allows us to analyze the gait data
+            collected by the wearable sensors in the form of signals by signal
+            processing and time series analysis techniques. We investigated the
+            application of the inertial measurement units (IMU) to detect the
+            subtle changes in a 3-hours simulated warehousing task on 12
+            subjects. The simulated tasks included loading weighted cartons on a
+            dolly, pushing the dolly on a set path (extended continuous
+            walking), and then unloading the cartons at the starting location
+          </p>
+          <p>
+            We transformed the acceleration signals from local to the global
+            frame of reference by removing the gravitational effects. Towards
+            this goal, the orientation of the IMU was estimated by combining the
+            angular orientation of the accelerometer and gyroscope by
+            application of a Kalman Filter. After removing the gravitational
+            component in the global frame, we calculated the acceleration
+            magnitude and filtered the high frequency noise using a zero-lag
+            4<sup>th</sup> order low-pass Butterworth filter with a cut-off
+            frequency of 10 HZ. Using a moving window segmentation algorithm we
+            filtered the magnitude signal to isolate individual gait cycles.
+            Next, subgrouped the gaits within each walking period for further
+            analysis.
+          </p>
+          <p>
+            We developed a statistical process contro (SPC) approach to create a
+            control chart in order to detect the subtle changes in the gait
+            pattern. Three method consists of 3 phases: phase0, 1, and 2. In
+            phase 0 we use the first 10 subgroups to computes the upper control
+            limit (UCL) using a bootstrapping technique and use it to remove the
+            outliers. Next, the phase 0 subgroups are used to compute the
+            within-subgroup covariance. The phase 1 data are next used to
+            calculate the UCL for the monitoring phase (2). In phase 2, the
+            T<sup>2</sup> is calcultaed for the online data. Any subgroup with
+            the T<sup>2</sup> larger than the UCL is considered out of control
+            and indicates fatigue.
+          </p>
+          <p>
+            We also used the method on 3 popular kinematic gait features i.e.
+            stride heigh, length, and duration. Uisng our method we calculated
+            the T<sup>2</sup> statistic for each feature as well as each feature
+            pair as a decomposition approach. We created an allipse chart for
+            the 3 feature pairs and calculated the univariate and bi-variate
+            control limits to diagnose the out-of-control signal. While in some
+            cases an individual feature may exceed its limits and cause the
+            signal, another cause could be the change in bi-variate covariance.
+          </p>
+          <p>
+            <b
+              >This work is submitted to the <u>Scientific Reports</u> journal
+              and is under review.</b
+            >
+          </p>
+        </div>
+        <div class="proj-main-row2-right">
+          <p style="text-align: center; font-size: 17px">
+            jhgjh jhgjhgj kjgjhgj
+          </p>
+          <a href="./images/Fig4.jpg" data-lightbox="mygallery">
+            <img src="./images/Fig4.jpg" alt="" width="100%" />
+          </a>
+          <br />
+          <p style="text-align: center; font-size: 17px">kjhkh kjkjg lkl</p>
+          <a href="./images/ellipse and table.jpg" data-lightbox="mygallery">
+            <img src="./images/ellipse and table.jpg" alt="" width="100%" />
+          </a>
+        </div>
+        <hr />
+      </div>
+      <!-- ################################################# -->
+      <div class="proj-main-row3">
+        <h1 id="EWMA">Gait EWMA</h1>
+        <div class="proj-main-row3-left">
+          <p style="font-size: 30px; font-weight: bold">
+            <a href="./gait_monitoring_EWMA.html" , target="blank"
+              >Code and R-Markdown</a
+            >
+          </p>
+          <p>
+            In this study we analyzed the gait data from the previous study and
+            investigated the application of the exponentially weighted moving
+            average (EWMA) method for detection of the changes in the gait
+            patterns due to fatigue. The EWMA is a cumulative SPC approach and
+            such approaches are designed to detect small and persistent changes
+            in the data by using all of the observed data available at the
+            current time point. Such methods work by accumulating the small
+            changes in the controlled statistical variable that occured prior to
+            the present time point.
+          </p>
+
+          <p>
+            We first segmented the gait cycles from the acceleration magnitude
+            that was calculated after removing the gravitational effect. We next
+            assigned the first 500 gait cycles to the baseline. Using the
+            concept of functional depth we compared the gait cycles against the
+            baseline (top figure in the right panel). We used two depth measures
+            to calculate the depth of each segmented gait profile against the
+            baseline. The 2 depth measures included the mode depth and the
+            Multivariate Functional Halfspace Depth (MFHD). Mode depth
+            calculation was computationally efficient however, the calculation
+            of MFHD depth was computationally expensive. Therefore, we performed
+            the MFHD calculations in parallel on 40 nodes on Ohio Super
+            Computing (OSC) center.
+          </p>
+          <p>
+            After calculating the depth values for individual gait cycles we
+            reassigned the depth values to their original subgroups and
+            constructed the EWMA control chart by considering the 1st 10
+            subgroups as the in-control data. The control limit was calculated
+            from the in-control data and used to detect the out-of-control
+            subgroups in the online data. The subgroups with the EWMA statsitic
+            larger than the control limit are considered fatigued. The bottom
+            figure in the right panel shows the EWMA chart for a sample subject.
+          </p>
+          <p>
+            <b>This is an ongoing project.</b>
+          </p>
+        </div>
+        <div class="proj-main-row3-right">
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/ranks.png" data-lightbox="mygallery">
+            <img src="./images/ranks.png" alt="" width="85%" />
+          </a>
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/depth.png" data-lightbox="mygallery">
+            <img src="./images/depth.png" alt="" width="85%"
+          /></a>
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/EWMA-control-chart.png" data-lightbox="mygallery">
+            <img src="./images/EWMA-control-chart.png" alt="" width="85%" />
+          </a>
+        </div>
+        <hr />
+      </div>
+      <!-- ################################################# -->
+      <div class="proj-main-row4">
+        <h1 id="posture">
+          Analysis of Back & Shoulder Posture in Palletizing Task
+        </h1>
+        <div class="proj-main-row4-left">
+          <p>
+            In a project that was funded by the Gore company we investigated the
+            effect of fatigue on the back and shoulder postures. Nine
+            participants were equipped with reflective markers at the upper body
+            landmarks as shown in the top figure in the right panel. The
+            participants were instructed to pick weighted boxes from a certain
+            location and place on the pallet. The participants performed this
+            task for 10 minutes in 3 consecutive sessions. The cartesian
+            coordinates of the markers were recorded using the Vicon motion
+            capture system. The data were post-processed in the Nexus software
+            and exported for further analysis.
+          </p>
+          <p>
+            The marker coordinates were used to calculate the Euler angles at
+            the soulder based on the ISB standards to find the
+            flexion-extension, adduction-abduction, and the axial rotation. The
+            back angle was also calculated with respect to the global vertical.
+            We investigated the change in the back and the shoulder
+            flexion-extension angle, their timing, and also the coordination
+            between the two. The angles and results are visualized in the two
+            bottom figures in the right panel.
+          </p>
+          <p>
+            In this project, the participants were also equipped with commercial
+            wearable sensors including Xsens, Dorsavi, and the ADI wearable
+            shirt. We validated the upper body angles calculated by each of
+            these sensors against the Vicon data.
+          </p>
+
+          <b>This is an ongoing project.</b>
+
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/bar.png" data-lightbox="mygallery">
+            <img src="./images/bar.png" alt="" width="85%" />
+          </a>
+        </div>
+        <div class="proj-main-row4-right">
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/markers.png" data-lightbox="mygallery">
+            <img src="./images/markers.png" alt="" width="85%" />
+          </a>
+          <p style="text-align: center; font-size: 20">lkjlk lkjlkj lkjlkj</p>
+          <a href="./images/gore.png" data-lightbox="mygallery">
+            <img src="./images/gore.png" alt="" width="85%" />
+          </a>
+        </div>
+        <hr />
+      </div>
+      <!-- ################################################# -->
+      <div class="proj-main-row5">
+        <h1 id="fairness">Fairness in Machine Learning</h1>
+        <div class="proj-main-row5-left">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+            libero voluptatibus maxime! Placeat ipsa, vero suscipit dolorum
+            asperiores, atque natus esse fugit ipsam sint temporibus veniam
+            dolores tempora? Quibusdam dolores possimus vel iste placeat,
+            accusamus perferendis similique fugit explicabo et repudiandae ullam
+            doloribus, labore distinctio iusto quia neque repellendus deserunt
+            ea culpa omnis. Officiis, impedit accusamus. Molestias nostrum odio
+            debitis minima accusamus nisi expedita rerum. Sapiente, eum sequi
+            quas itaque aliquam dolores adipisci doloremque eligendi quia, in
+            veniam iste necessitatibus ad sint quam illum perspiciatis facere
+            libero ut. Minima repellendus iste dolorum assumenda expedita sunt
+            harum distinctio veniam maxime. Quo.
+          </p>
+        </div>
+        <div class="proj-main-row5-right">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            sequi saepe voluptatem. Et labore sequi officiis aut magnam, ex
+            corrupti?
+          </p>
+        </div>
+      </div>
+      <!-- ################################################# -->
+    </div>
+  </body>
+</html>

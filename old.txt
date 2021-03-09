@@ -1,0 +1,436 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+	<title> My Web Page </title>
+
+	<!-- Meta Element -->
+	<!-- meta element does not show on the output html. It always inserted inside the head element. Provides description of the webpage's content to the search engine. 2 important attributes: 1- name (http-equiv, does the same thing as name); 2- content. Only 155 characters are allowed in the content. Content is sometimes displayed in the search results!! Different values for the name attribute: 1- "description" 2- "keyword", "author", "content-language". keyword is not used by google anymore, however some foreign search engines may still use them. 
+	Content-language for english use en-us; 1st the lang, 2nd the country. -->
+	
+	<meta name="description", content="This website is developed just to practice developing a website." />
+
+	<meta name="keyword", content="saeb, ragani, lamooki" />
+
+	<meta http-equiv="author" content="Saeb Ragani" />
+
+	<meta http-equiv="content-language", content="en-us" />
+
+
+
+	<!-- Style is another element defined inside the head. -->
+
+	<!-- 1st way to do it internally. -->
+
+	<!-- <style type="text/css">
+
+		body {
+			color: green;
+			font-family: verdana, Arial, Geneva, Arial Black;
+			/*font-weight: bolder;*/
+		}
+		
+		h2 {
+			background-color: white;
+			color: blue;
+			border-bottom: 1px solid red;
+
+			/*font-size: 20px;*/
+			/*font-family: Arial;*/
+		}
+
+
+
+		/* Add CSS ????? / Define a class */
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+
+
+		.underline {
+			text-decoration: underline;
+		}
+
+		.fontweight: {
+			/*lighter, normal, bold, bolder*/
+			font-weight: normal;
+		}
+
+	</style> -->
+
+
+
+	<!-- 2nd way is to do it Externally -->
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+	
+
+</head>
+
+<body>
+
+<p> Just listen to this </p>
+
+<!-- Audio -->
+<p> Its called sunny morning </p>
+
+<audio controls autoplay loop>
+	<source src="media/audio/Devaldi Sunny Morning.mp3" type="audio/mpeg" />
+</audio>
+
+<p class="makebolder"> This is the start. will work on it later. </p>
+
+	<ul>
+		<li> unordered one </li>
+		<li> unordered two </li>
+		<li> three </li>
+	</ul>
+
+
+	<ol>
+		<li> Ordered one </li>
+		<li> ttt </li>
+		<li> three </li>
+	</ol>
+
+<h2> The second header </h2>
+
+<p> I will do it. </p>
+
+
+<br>
+<br>
+<br>
+<!-- Create table -->
+<h2> Insert a Table </h2>
+
+
+<table>
+	<tr>
+		<th> name </th>
+		<th> age </th>
+		<th> gender </th>
+		<th> weight </th>
+	</tr>
+
+	<tr>
+		<td> Hashem </td>
+		<td> 22 </td>
+		<td> Male </td>
+		<td> 97 </td>
+	</tr>
+
+	<tr>
+		<td> Kazem </td>
+		<td> 27 </td>
+		<td> Male </td>
+		<td> 86 </td>
+	</tr>
+
+</table>
+
+
+<br>
+<br>
+<br>
+<!-- Create link -->
+<h2> Create a Link </h2>
+
+You can find the materials on
+<a href="https://github.com/saebragani">
+	my Github
+</a>.
+
+
+
+<br><br><br>
+<!-- Insert an image; Class -->
+<h2> Insert Image </h2>
+
+<p> <img src="lake.jpg", width="500", height="200", class="center"> </p>
+
+
+
+
+<br>
+<br>
+<br>
+
+<!-- insert an input box -->
+<h2> Single Line Text Box </h2>
+
+<form action="", method="">
+
+	<label for="firstname"> First Name: </label>
+	<input type="text", id="firstname", name="">
+
+	<label for="lastname", class="center"> Last Name: </label>
+	<input type="text", id="lastname" name="", class="center">
+	<br>
+	<input type="text" name="", size="10">
+	<input type="text" name="", size="100">
+</form>
+
+
+<br><br><br>
+<!-- Multi line text box -->
+<h2> Multiline Text Box </h2>
+
+<form action="", method="">
+	Comments: <br>
+	<textarea rows="10", cols="50"></textarea> <br>
+	<input type="submit" value="Submit">
+
+</form>
+
+
+<br>
+<br>
+<br>
+<!-- Radio Buttons -->
+<h2> Create Radio Buttons </h2>
+
+<form action="", method="">
+	
+	Is this right? <br>
+	Yes:
+	<input type="Radio" name="yesno"> <br>
+	No:
+	<input type="Radio" name="yesno"> <br>
+	Maybe:
+	<input type="Radio" name="yesno">
+</form>
+
+
+<br>
+<br>
+<br>
+<!-- Checkbox -->
+<h2> Create Checkbox </h2>
+
+<form>
+	Select the one/s you like <br>
+	<input type="Checkbox" name="", checked="checked"> Option 1 <br>
+	<input type="Checkbox" name=""> Option 2 <br>
+	<input type="Checkbox" name=""> Option 3 <br>
+	<input type="Checkbox" name=""> Option 4
+
+</form>
+
+
+<br>
+<br>
+<br>
+<!-- Input Numbers -->
+<h2> Create Inout Numbers </h2>
+
+<form action="", method="">
+	
+	<input type="number", min="3", max="7">
+
+</form>
+
+
+<br>
+<br>
+<br>
+<!-- Dropdown -->
+<h2> Create Dropdown List </h2>
+
+<form action="", method="">
+	
+	<select>
+		<option value="Option 1"> Option 1 </option>
+		<option value="Option 2"> Option 2 </option>
+		<option value="Option 3"> Option 3 </option>
+	</select>
+
+</form>
+
+
+
+<br><br><br>
+<!-- Date and Number -->
+<h2> Create Date and Number Inputs </h2>
+
+<form>
+
+	Select your preferred departure date below:
+	<input type="date" name="day"> <br>
+
+	duaration of stay: <input type="number" name="numdays", min="2", max="10">
+</form>
+
+
+<br><br><br>
+<!-- Fieldbox and Legend -->
+<h2> Create Your Input Boxes inside a Frame </h2>
+
+<form>
+
+	<fieldset>
+		<legend> Form Legend Here </legend>
+
+		Enter the date:
+		<input type="date" name="">  <br><br>
+
+		Number of days:
+		<input type="number" name=""> <br><br>
+
+		Input your first and last name:
+		<input type="text" name="">
+	</fieldset>
+
+</form>
+
+
+<br><br><br>
+<!-- Escape Characters -->
+
+<!-- 
+space -------  &nbsp;
+™ ---------- &#8482;
+& ---------- &amp;
+© ---------- &copy;
+< ----------- &lt;
+> ----------- &gt;
+? ----------- &#63;
+ -->
+
+<h2> Insert multiple white spaces: </h2>
+
+How are you     doing? <br>
+How are you &nbsp &nbsp &nbsp &nbsp doing?
+
+
+<br><br><br>
+<!-- Bold and Italic -->
+<h2> Bold, Italic, Strong, and em elements: </h2>
+
+This is a <b>bold</b> element. <br>
+
+This is a <strong>strong</strong> element. <br>
+
+This is an <i>italic</i> element. <br>
+
+This is an <em>em</em> element.
+
+
+
+<br><br><br>
+<!-- Iframe and Anchorlink -->
+<h2> Iframe and Anchor link </h2>
+
+<iframe frameborder="1", width="80%", height="300",
+src="first page.html", name="myiframe", id="myiframe"></iframe> <br>
+
+<a href="second page.html", target="myiframe"> Switch above Iframe source. </a>
+
+
+<br><br><br>
+<!-- Sub-Super-Scripts -->
+<h2> Sub-scripts and Super-scripts </h2>
+
+<p> It hgappend on the 3<sup>rd</sup> of August.</p>
+<p> The twho hyper-parameters, h<sub>1</sub>, h<sub>2</sub> are tuned.</p>
+
+
+
+<br><br><br>
+<!-- Title and alt -->
+<h2> Give Title to Elements; Specifically img Elements </h2>
+
+<img src="lake.jpg", width="20%", title="hover to see the title",
+alt="The lake in Canada">
+
+
+
+<!-- <br><br><br> -->
+<!-- Audio -->
+<!-- <h2> Include Audio </h2>
+
+<audio controls autoplay loop>
+	<source src="my_audio.mp3" type="audio/mpeg" />
+</audio> -->
+
+<!-- <iframe src="my_audio.mp3" allow="autoplay" id="audio"></iframe>
+
+<audio id="player" autoplay controls><source src="0.mp3" type="audio/mp3"></audio> -->
+
+
+<br><br><br>
+<!-- gif file -->
+<h2> Include a gif file </h2>
+
+<img src="anim_a_mag_sub11.gif", width=50%>
+
+
+
+<!-- <br><br><br> -->
+<!-- Video File -->
+<!-- <h2> Include a mp4 video file </h2>
+
+<video width="640", height="360" controls>
+	<source src="ala gol.mp4" type="video/mp4">
+</video> -->
+
+
+
+<br><br><br>
+<!-- Inline Style -->
+<h2> InlineStyle </h2>
+
+
+<p style="color: lime; font-size: 50px;"> Change the color and other properties within this paragraph using inline style. </p>
+
+
+
+
+
+<a href="gait_monitoring_EWMA.html", target="myiframe"> Switch above Iframe source. </a>
+
+<br><br><br>
+
+<a href="gait_monitoring_hotelling.html", target="myiframe"> Switch above Iframe source. </a>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
