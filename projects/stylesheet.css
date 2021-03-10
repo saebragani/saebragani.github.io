@@ -38,7 +38,7 @@
 }
 /* ################################################# */
 .proj-main-row1 {
-  height: 1250px;
+  height: 1500px;
   /* border: solid; */
   /* border-color: red; */
   padding-left: 1%;
@@ -53,6 +53,12 @@
   height: 90%;
   padding: 0px 10px;
   font-size: 20px;
+}
+
+.proj-main-row1-left img {
+  float: left;
+  width: 100%;
+  padding: 0px 22%;
 }
 
 .proj-main-row1-right {
@@ -170,7 +176,7 @@ tr:nth-child(even) {
 
 /* ################################################# */
 .proj-main-row5 {
-  height: 1000px;
+  height: 700px;
   /* border: solid;
   border-color: red; */
   padding-left: 1%;
@@ -179,21 +185,11 @@ tr:nth-child(even) {
 
 .proj-main-row5-left {
   float: left;
-  width: 60%;
+  width: 100%;
   /* border: double;
   border-color: blue; */
   height: 90%;
   padding: 0px 10px;
-  font-size: 23px;
-}
-
-.proj-main-row5-right {
-  float: left;
-  width: 40%;
-  /* border: solid;
-  border-color: green; */
-  height: 90%;
-  padding: 0px 5%;
   font-size: 23px;
 }
 
