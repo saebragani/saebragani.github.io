@@ -38,7 +38,7 @@
 }
 /* ################################################# */
 .proj-main-row1 {
-  height: 1080px;
+  height: 1250px;
   /* border: solid; */
   /* border-color: red; */
   padding-left: 1%;
@@ -123,7 +123,7 @@
 
 /* ################################################# */
 .proj-main-row4 {
-  height: 1000px;
+  height: 1050px;
   /* border: solid;
   border-color: red; */
   padding-left: 1%;
@@ -148,6 +148,24 @@
   height: 90%;
   padding: 0px 5%;
   font-size: 23px;
+}
+
+.proj-main-row4-right table {
+  font-family: arial, sans-serif;
+  width: 100%;
+  border: 1px solid black;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid black;
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 /* ################################################# */

@@ -127,8 +127,8 @@
             The collected signal from a sample participant and the transition
             points.
           </p>
-          <a href="./images/allLabeled.png" data-lightbox="mygallery">
-            <img src="./images/allLabeled.png" alt="" width="100%"
+          <a href="./images/acc.png" data-lightbox="mygallery">
+            <img src="./images/acc.png" alt="" width="100%"
           /></a>
           <br /><br />
           <p style="text-align: center; font-size: 17px">
@@ -320,8 +320,188 @@
         <hr />
       </div>
       <!-- ################################################# -->
-      <div class="proj-main-row5">
+      <div class="proj-main-row4">
         <h1 id="fairness">Fairness in Machine Learning</h1>
+        <div class="proj-main-row4-left">
+          <p>
+            COMPAS is a machine learning (ML) algorithm that is widely used in
+            the US judiciary system for considerations in pretrial detention and
+            sentence determinationuses. It evaluates criminal on ver 100 factors
+            and outputs a score that indicates how likely it is for the person
+            to commit a crime in the future. These scores are then taken into
+            consideration by judges when assigning sentences, determining
+            bail/parole eligibility, etc. Critically, race is not one of the
+            factors used in by COMPAS. ProPublica reviewed the output of COMPAS
+            on a dataset of over 7000 individuals from Broward County, Florida.
+            They found that the algorithm correctly predicted recidivism at
+            similar rates for both white (59%) and black defendants (63%).
+            However, when the algorithm was incorrect it tended to skew very
+            differently for each of these groups. White defendants who
+            re-offended within two years were mistakenly labelled low-risk
+            almost twice as often as their black counterparts. Additionally,
+            black defendants who did not recidivate were rated as high-risk at
+            twice the rate of comparable white defendants.
+          </p>
+          <p>
+            To that end, in an ML course project we were assigned the task to
+            optimize the post-processing evaluation methods to improve the fairness in 3 ML models.
+            The 3 models were trained on a data set from the Broward county: a
+            linear support vector regressor, a feed forward neural network, and
+            a naive Bayes classifier. We invetigated 5 potential post-processing
+            methods that enforce various constraints in attempts to reflect
+            different measures of fairnessWe in ML. The evaluation methods included:
+            <ol>
+              <li>Maximum profit/Maximum Accuracy</li>
+              <li>Single Threshold</li>
+              <li>Predictive parity</li>
+              <li>Demographic parity</li>
+              <li>Equal Opportunity</li>
+            </ol>
+            Using each of these approaches the accuracy and other performance metrics were
+            compromised in order to achieve higher fairness using different fairness metrics.
+            I have included a sample output presenting the
+            FPR, FNR, TPR, TNR, and accuracy for each race as well as the overal accuracy and cost.
+            The best fairness metric was selected and justified based on our discretion.
+          </p>
+        </div>
+        <div class="proj-main-row4-right">
+          <p, style="margin-left:10%;">Enforce Equal Opportunity</p>
+          <table>
+            <tr>
+              <th>Accuracy for African-American
+              </th>
+              <td>0.63 %
+              </td>
+            </tr>
+            <tr>
+              <th>Accuracy for Caucasian
+              </th>
+              <td>0.63 %
+              </td>
+            </tr>
+            <tr>
+              <th>Accuracy for Hispanic
+              </th>
+              <td>0.60 %</td>
+            </tr>
+            <tr>
+              <th>Accuracy for Other
+              </th>
+              <td>0.60 %</td>
+            </tr>
+            <tr>
+              <th>FPR for African-American
+              </th>
+              <td>0.51 %
+              </td>
+            </tr>
+            <tr>
+              <th>FPR for Caucasian
+              </th>
+              <td>0.50 %
+              </td>
+            </tr>
+            <tr>
+              <th>FPR for Hispanic
+              </th>
+              <td>0.51 %</td>
+            </tr>
+            <tr>
+              <th>FPR for Other
+              </th>
+              <td>0.50 %</td>
+            </tr>
+            <tr>
+              <th>FNR for African-American
+              </th>
+              <td>0.25 %
+              </td>
+            </tr>
+            <tr>
+              <th>FNR for Caucasian
+              </th>
+              <td>0.24 %
+              </td>
+            </tr>
+            <tr>
+              <th>FNR for Hispanic
+              </th>
+              <td>0.25 %</td>
+            </tr>
+            <tr>
+              <th>FNR for Other
+              </th>
+              <td>0.25 %</td>
+            </tr>
+            <tr>
+              <th>TPR for African-American
+              </th>
+              <td>0.75 %
+              </td>
+            </tr>
+            <tr>
+              <th>TPR for Caucasian
+              </th>
+              <td>0.76 %
+              </td>
+            </tr>
+            <tr>
+              <th>TPR for Hispanic
+              </th>
+              <td>0.75 %</td>
+            </tr>
+            <tr>
+              <th>TPR for Other
+              </th>
+              <td>0.75 %</td>
+            </tr>
+            <tr>
+              <th>TNR for African-American
+              </th>
+              <td>0.49 %
+              </td>
+            </tr>
+            <tr>
+              <th>TNR for Caucasian
+              </th>
+              <td>0.50 %
+              </td>
+            </tr>
+            <tr>
+              <th>TNR for Hispanic
+              </th>
+              <td>0.49 %</td>
+            </tr>
+            <tr>
+              <th>TNR for Other
+              </th>
+              <td>0.50 %</td>
+            </tr>
+            <tr>
+              <th>Total Cost
+              </th>
+              <td>$757,737,810</td>
+            </tr>
+            <tr>
+              <th>Overal Accuracy
+              </th>
+              <td>0.63 %</td>
+            </tr>
+          </table>
+        </div>
+        <hr />
+      </div>
+      <!-- ################################################# -->
+      <div class="proj-main-row5">
+        <h1 id="scratch">
+          Coding 5 Clustering & 4 Classification Algorithms from scratch in
+          Python
+        </h1>
+        <p style="font-size: 30px; font-weight: bold">
+          <a href="https://github.com/saebragani/CSE-601" target="blank"
+            >Github Link</a
+          >
+        </p>
         <div class="proj-main-row5-left">
           <p>
             Optimizing Post-processing Techniques to Improve Fairness in ML. 5
@@ -333,36 +513,6 @@
           </p>
         </div>
         <div class="proj-main-row5-right">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-            sequi saepe voluptatem. Et labore sequi officiis aut magnam, ex
-            corrupti?
-          </p>
-        </div>
-        <hr />
-      </div>
-      <!-- ################################################# -->
-      <div class="proj-main-row6">
-        <h1 id="scratch">
-          Coding 5 Clustering & 4 Classification Algorithms from scratch in
-          Python
-        </h1>
-        <p style="font-size: 30px; font-weight: bold">
-          <a href="https://github.com/saebragani/CSE-601" target="blank"
-            >Github Link</a
-          >
-        </p>
-        <div class="proj-main-row6-left">
-          <p>
-            Optimizing Post-processing Techniques to Improve Fairness in ML. 5
-            post-processing techniques to enforce Fairness in COMPAS algorithm
-            which is used to assists with pretrial detention and sentence
-            determination. 1- Maximum profit/Maximum Accuracy, 2- Single
-            Threshold, 3- Predictive parity, 4- Demographic parity 5-Equal
-            Opportunity
-          </p>
-        </div>
-        <div class="proj-main-row6-right">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
             sequi saepe voluptatem. Et labore sequi officiis aut magnam, ex
