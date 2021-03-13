@@ -38,7 +38,7 @@
 }
 /* ################################################# */
 .proj-main-row1 {
-  height: 150%;
+  height: 180%;
   /* border: solid; */
   /* border-color: red; */
   padding-left: 1%;
@@ -48,18 +48,18 @@
 .proj-main-row1-left {
   float: left;
   width: 60%;
-  /* border: double; */
-  /* border-color: blue; */
+  /* border: double;
+  border-color: blue; */
   height: 90%;
   padding: 0px 10px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
-.proj-main-row1-left img {
+/* .proj-main-row1-left img {
   float: left;
   width: 100%;
   padding: 0px 22%;
-}
+} */
 
 .proj-main-row1-right {
   float: left;

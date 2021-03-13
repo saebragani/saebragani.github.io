@@ -63,70 +63,44 @@
             >
           </p>
           <p>
-            Human Activity Recognition (HAR) is used in a plethora of
-            applications such as activities of daily living to predict the
-            undertaken task using the data from wearable sensors. The research
-            however been less concentrated on industrial applications. In a
-            research that was funded by General Electric (GE), using a set of
-            prepeiotory wearable sensors we collected data from a 40
-            participants to simulate the activities of electric line workers.
-            Ten activities were included in this study which were rather more
-            complex than the one included in most of the HAR literature.
+            We recruited 44 subjects to perform 10 activities to simulate electric line worker's daily tasks.
+            The tasks included:
+            <ol>
+              <li>Sitting</li>
+              <li>Stainding</li>
+              <li>Walking</li>
+              <li>Hoisting a Bucket</li>
+              <li>Lifting & Lowering a Box</li>
+              <li>Pushing a Cart</li>
+              <li>Typing on a Computer</li>
+              <li>Climbing up and down a Ladder</li>
+              <li>Working in an Electric Panel</li>
+              <li>Inserting a Screw at overhead Level</li>
+            </ol>
+            The subjects were equipped with GE proprietary wearables and the sensor data were transfered to the
+            cloud during the sessions. I used the signals to create features in 3 domains:
+            <ul>
+              <li>Time</li>
+              <li>Frequency</li>
+              <li>Time-Frequency</li>
+            </ul>
+            and performed machine learning methods to classify the undertaken tasks. I used the Scikit-Learn
+            and TensorFlow libraries in Python to do that.
           </p>
           <p>
-            As a more challenging task we tried to classify the 10 activities in
-            our experiments using the data from a single accelerometer on the
-            participant's dimonant wrist. We the effect of different features
-            from the 3 domains i.e. time, frequeny, and time-frequency. Using a
-            fixed length sliding window approach we further investigated the
-            effect of 2 window sizes. As the simplest approach the time features
-            were calculated as 10 statistical measures from the original X, Y,
-            and Z acceleration signals in time domain. The frequency features
-            are the Fourier coefficients calculated using the FFT approach. For
-            the time-frequency domain we used the wevalet transform, using the
-            filter bank approach. Using Daubechies mother wavelet (db4) the
-            approximation and detail coefficients were obtained up to the
-            maximum possible level.Next, we obtained 12 statistics from the last
-            approximation and all detail coefficients and used them as the input
-            features for the classifiers.
+            Also, to assure similar performance of the classification when launched, I used the LIME
+            method to find the relevance of the features that contribute most to the prediction
+            by reconstructing the signals from the frequency and time-frequency features.
           </p>
           <p>
-            Also, we investigated the performance of multiple classifiers
-            including Multi Layaer Perceptron (MLP), basic Recurrent Neural
-            Networks (RNN), Long Short Term Memory Metworks (LSTM),
-            <i>k</i>-NN, SVM, and rnadom forest. The deep learning techniques
-            were implemented using TensorFlow python and the conventional
-            classifiers were implemented using the Scikit-learn package in
-            python. We observed a better performance for the combination of
-            time-frequency features with the SVM classifier. Moreover, longer
-            window lengths resulted in better classification performance as we
-            expected.
+            <b>This work is under review in <u>IISE</u> journal.</b>
           </p>
-          <p>
-            Many classifiers that show excellent performnce in the data in the
-            laboratory settings fail to perform similarly when launched. The
-            interpretable machine learning techniques try to address this issue
-            by evaluating the relevance of the features. In an effort to
-            evaluate the relevance of the data that lead to the predictions we
-            exploited the Local Interpretable Model-agnostic Explanations (LIME)
-            method to find the important features for the prediction of
-            different classes. Using the selected features in the frequency and
-            time-frequency domains, we reconstructed the signals to provide
-            insights about whether the perodicity, the non-stationary component,
-            or the dispersion in the signals contributed to the predicted label.
-          </p>
-          <p>
-            <b
-              >This work is being prepared to be submitted to the
-              <u>IISE</u> journal.</b
-            >
-          </p>
-          <p style="font-size=17px; text-align: center;">Sample Participants Wearing Different Parts of the wearable System</p>
-          <a href="./images/wrist.png" data-lightbox="mygallery">
-            <img src="./images/wrist.png" alt="">
-          </a>
         </div>
         <div class="proj-main-row1-right">
+          <p style="font-size: 17px; text-align: center;">Sample Participants Wearing Different Parts of the wearable System</p>
+          <a href="./images/wrist.png" data-lightbox="mygallery">
+            <img src="./images/wrist.png" alt="" width="70%" style="margin-left: 15%;">
+          </a>
           <p style="text-align: center; font-size: 17px">
             The collected signal from a sample participant and the transition
             points.
