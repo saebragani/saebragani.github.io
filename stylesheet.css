@@ -230,3 +230,12 @@ h2 {
   text-decoration: none;
   border-radius: 10px;
 }
+
+/* ================================================
+responsive
+ ================================================*/
+
+@media (min-width: 100px) and (max-width: 1330px) {
+  .right-column-out {
+    height: 150%;
+  }
