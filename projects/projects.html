@@ -133,63 +133,33 @@
             >
           </p>
           <p>
-            Gait analysis is used for multiple purposes including for diagnosis,
-            intervention, and monitoring of gait patterns in patients with
-            diseases that adversely affect the gait such as Parkinson's disease
-            patients and stroke survivors. It is also important for ergonomic
-            assessment of the industrial workers in physically challenging
-            occupations such as warehousing. While in conventional approaches
-            the gait evaluation was performed as visual inspection by experts,
-            the advent of wearable technology allows us to analyze the gait data
-            collected by the wearable sensors in the form of signals by signal
-            processing and time series analysis techniques. We investigated the
-            application of the inertial measurement units (IMU) to detect the
-            subtle changes in a 3-hours simulated warehousing task on 12
-            subjects. The simulated tasks included loading weighted cartons on a
-            dolly, pushing the dolly on a set path (extended continuous
-            walking), and then unloading the cartons at the starting location
+            We recruited 12 subjects to perform manual material handling tasks for 3 hours.
+            Using the the IMU signals that was attached to their right ankle we tried to dtect fatigues.
+            We developed a statistical process control (SPC) approach to construct a control
+            chart.
           </p>
           <p>
-            We transformed the acceleration signals from local to the global
-            frame of reference by removing the gravitational effects. Towards
-            this goal, the orientation of the IMU was estimated by combining the
-            angular orientation of the accelerometer and gyroscope by
-            application of a Kalman Filter. After removing the gravitational
-            component in the global frame, we calculated the acceleration
-            magnitude and filtered the high frequency noise using a zero-lag
-            4<sup>th</sup> order low-pass Butterworth filter with a cut-off
-            frequency of 10 HZ. Using a moving window segmentation algorithm we
-            filtered the magnitude signal to isolate individual gait cycles.
-            Next, subgrouped the gaits within each walking period for further
-            analysis.
+            We grouped the gait cycles during continuous walking periods into subgroups and 
+            assigned the first few subgroups to baseline and designed a 3-phase SPC approach:
+            <ol>
+              <li>Phase 0: to remove outliers & find the within subgroup covariance</li>
+              <li>Phase 1: to find the upper control limit using a bootstrapping technique</li>
+              <li>Phase 2: the online data to be monitored</li>
+            </ol>
           </p>
           <p>
-            We developed a statistical process contro (SPC) approach to create a
-            control chart in order to detect the subtle changes in the gait
-            pattern. Three method consists of 3 phases: phase0, 1, and 2. In
-            phase 0 we use the first 10 subgroups to computes the upper control
-            limit (UCL) using a bootstrapping technique and use it to remove the
-            outliers. Next, the phase 0 subgroups are used to compute the
-            within-subgroup covariance. The phase 1 data are next used to
-            calculate the UCL for the monitoring phase (2). In phase 2, the
-            T<sup>2</sup> is calcultaed for the online data. Any subgroup with
-            the T<sup>2</sup> larger than the UCL is considered out of control
-            and indicates fatigue.
+            The subgroups whose T<sup>2</sup> statistic exceeded the control limit
+            created an out-of-control signal and considered fatigued.
           </p>
           <p>
-            We also used the method on 3 popular kinematic gait features i.e.
-            stride heigh, length, and duration. Uisng our method we calculated
-            the T<sup>2</sup> statistic for each feature as well as each feature
-            pair as a decomposition approach. We created an allipse chart for
-            the 3 feature pairs and calculated the univariate and bi-variate
-            control limits to diagnose the out-of-control signal. While in some
-            cases an individual feature may exceed its limits and cause the
-            signal, another cause could be the change in bi-variate covariance.
+            Aside from fatigue detection this approach can be used for detecting the
+            gait deterioration in certain patients as well as the gait improvement in
+            the rehabilitation process. This can be done by modifying the subgrouping
+            period to days or weeks.
           </p>
           <p>
             <b
-              >This work is submitted to the <u>Scientific Reports</u> journal
-              and is under review.</b
+              >This work is under review in <u>Scientific Reports</u> journal.</b
             >
           </p>
         </div>
@@ -236,40 +206,25 @@
             >
           </p>
           <p>
-            In this study we analyzed the gait data from the previous study and
-            investigated the application of the exponentially weighted moving
-            average (EWMA) method for detection of the changes in the gait
-            patterns due to fatigue. The EWMA is a cumulative SPC approach and
-            such approaches are designed to detect small and persistent changes
-            in the data by using all of the observed data available at the
-            current time point. Such methods work by accumulating the small
-            changes in the controlled statistical variable that occured prior to
-            the present time point.
-          </p>
-
-          <p>
-            We first segmented the gait cycles from the acceleration magnitude
-            that was calculated after removing the gravitational effect. We next
-            assigned the first 500 gait cycles to the baseline. Using the
-            concept of functional depth we compared the gait cycles against the
-            baseline (top figure in the right panel). We used two depth measures
-            to calculate the depth of each segmented gait profile against the
-            baseline. The 2 depth measures included the mode depth and the
-            Multivariate Functional Halfspace Depth (MFHD). Mode depth
-            calculation was computationally efficient however, the calculation
-            of MFHD depth was computationally expensive. Therefore, we performed
-            the MFHD calculations in parallel on 40 nodes on Ohio Super
-            Computing (OSC) center.
+            Using the gait data from the previous study, we tried to use a cumulative SPC
+            approach (EWMA) to detect fatigue.
           </p>
           <p>
-            After calculating the depth values for individual gait cycles we
-            reassigned the depth values to their original subgroups and
-            constructed the EWMA control chart by considering the 1st 10
-            subgroups as the in-control data. The control limit was calculated
-            from the in-control data and used to detect the out-of-control
-            subgroups in the online data. The subgroups with the EWMA statsitic
-            larger than the control limit are considered fatigued. The bottom
-            figure in the right panel shows the EWMA chart for a sample subject.
+            After segmenting the gait cycles from the IMU signals, we assigned the first 500
+            cycles to the baseline and calculated the depth of the remaining gait profiles
+            with respect to the baseline. We used 2 different functional depth measures:
+            <ul>
+              <li>Mode Depth</li>
+              <li>Multivariate Functional Halfspace Depth (MFHD)</li>
+            </ul>
+            calculation of MFHD depth was computationally expensive and therefore, we performed
+            the calculations in parallel on 40 nodes on Ohio Super Computing (OSC) center.
+          </p>
+          <p>
+            After calculating the depth measures, we reassigned the values to their original
+            subgroups and constructed the EWMA control chart by considering the 1st 10
+            subgroups as the in-control data. The gaits with EWMA statistic larger than the
+            control limit are considered fatigued.
           </p>
           <p>
             <b>This is an ongoing project.</b>
@@ -304,31 +259,26 @@
         <div class="proj-main-row4-left">
           <p>
             COMPAS is a machine learning (ML) algorithm that is widely used in
-            the US judiciary system for considerations in pretrial detention and
-            sentence determinationuses. It evaluates criminal on ver 100 factors
-            and outputs a score that indicates how likely it is for the person
-            to commit a crime in the future. These scores are then taken into
-            consideration by judges when assigning sentences, determining
-            bail/parole eligibility, etc. Critically, race is not one of the
-            factors used in by COMPAS. ProPublica reviewed the output of COMPAS
-            on a dataset of over 7000 individuals from Broward County, Florida.
-            They found that the algorithm correctly predicted recidivism at
-            similar rates for both white (59%) and black defendants (63%).
-            However, when the algorithm was incorrect it tended to skew very
-            differently for each of these groups. White defendants who
-            re-offended within two years were mistakenly labelled low-risk
-            almost twice as often as their black counterparts. Additionally,
-            black defendants who did not recidivate were rated as high-risk at
-            twice the rate of comparable white defendants.
+            the US judiciary system to help the judge to decide to make decisions about the bail/parole eligibility
+            by prdicting how likely it is for the person to commit a crime in the future.
+            While race is not one of the features used by COMPASS for prediction, an independent non-profit
+            news organization, evaluated the algorithm on certain data and claimed when the algorithm was
+            incorrect it tended to skew very differently for different races.
           </p>
           <p>
-            To that end, in an ML course project we were assigned the task to
-            optimize the post-processing evaluation methods to improve the fairness in 3 ML models.
-            The 3 models were trained on a data set from the Broward county: a
-            linear support vector regressor, a feed forward neural network, and
-            a naive Bayes classifier. We invetigated 5 potential post-processing
-            methods that enforce various constraints in attempts to reflect
-            different measures of fairnessWe in ML. The evaluation methods included:
+
+          </p>
+          <p>
+            Along these lines we tried to optimize the post-processing evaluation methods to improve the
+            fairness in 3 ML models:
+            <ul>
+              <li>Linear Support Vector Regressor</li>
+              <li>Feed-forward Neural Network</li>
+              <li>Naive Bayes Classifier</li>
+            </ul>
+            The 3 models were trained on a data set from the Broward county. We invetigated 5 potential post-processing
+            methods that enforce different constraints in attempts to reflect different measures of fairnessWe in ML.
+            The evaluation methods included:
             <ol>
               <li>Maximum profit/Maximum Accuracy</li>
               <li>Single Threshold</li>
@@ -483,36 +433,34 @@
         </p>
         <div class="proj-main-row5-left">
           <p>
-            As a course project in Data Mining and Bio-informatics (CSE 601),
-            we were asigned to find clusters of genes that exhibit similar expression
-            profiles. We were asked to implement 5 clustering algorithms in Python
-            <u>without the use of any existing packages</u>. The 5 Clustering algorithms included:
+            I implemented 5 clustering algorithms in Python in order to find clusters of genes that exhibit
+            similar expression profiles <u>without the use of any existing libraries</u>.
+            The 5 Clustering algorithms included:
             <ol>
               <li>K-means</li>
               <li>Hierarchical Agglomerative</li>
-              <li>density-based</li>
-              <li>mixture model</li>
-              <li>spectral clustering</li>
+              <li>Density-based</li>
+              <li>Mixture Model</li>
+              <li>Spectral Clustering</li>
             </ol>
-            We were also provided with the true clusters and validated our results using
-            external index (Rand Index and Jaccard Coefficient). We also visualize data sets
-            and clustering results by Principal Component Analysis (PCA) (also implemented
-            from scratch).
+            Using the true clusters I validated my results using external index (Rand Index and
+            Jaccard Coefficient). I also visualize data sets and clustering results by Principal
+            omponent Analysis (PCA) (also implemented by me).
           </p>
           <p>
-            We were also assigned to implement three classification algorithms <u>without the use
-            of any existing packages</u>:
+            I also implemented 4 classification algorithms in Python <u>without the use existing libraries</u>
+            wich included:
             <ol>
               <li>Nearest Neighbor (<i>k</i>-NN)</li>
               <li>Decision Tree</li>
               <li>Naive Bayes</li>
               <li>Random Forest</li>
             </ol>
-            Next, using a 10-fold cross validation we evaluated the performance of each method on
-            two datasets, provided to us in terms of Accuracy, Precision, Recall, and F-1 score.
+            and using a 10-fold cross validation I evaluated the performance of each method on
+            two datasets in terms of accuracy, precision, recall, and F-1 score.
           </p>
-          <hr />
         </div>
+        <hr />
       </div>
       <!-- ################################################# -->
       <br><br><br><br>
@@ -523,25 +471,19 @@
         <div class="proj-main-row6-left">
           <p>
             In a project that was funded by the Gore company we investigated the
-            effect of fatigue on the back and shoulder postures. Nine
-            participants were equipped with reflective markers at the upper body
-            landmarks as shown in the top figure in the right panel. The
-            participants were instructed to pick weighted boxes from a certain
-            location and place on the pallet. The participants performed this
-            task for 10 minutes in 3 consecutive sessions. The cartesian
-            coordinates of the markers were recorded using the Vicon motion
-            capture system. The data were post-processed in the Nexus software
-            and exported for further analysis.
+            effect of fatigue on the back and shoulder postures. We recruited 9
+            participants and attached reflective markers at the land marks on their upper body
+            as shown in the top figure in the right panel. Thesubjects perfomed palletinzing task
+            for 3 sessions of 10 minutes duration. The marker data were collected using
+            Vicon motion capture system.
           </p>
           <p>
-            The marker coordinates were used to calculate the Euler angles at
-            the soulder based on the ISB standards to find the
-            flexion-extension, adduction-abduction, and the axial rotation. The
-            back angle was also calculated with respect to the global vertical.
-            We investigated the change in the back and the shoulder
-            flexion-extension angle, their timing, and also the coordination
-            between the two. The angles and results are visualized in the two
-            bottom figures in the right panel.
+            I used the marker coordinates to calculate the Euler angles at
+            the soulder based on the ISB standards (flexion-extension, adduction-abduction, and the axial rotation).
+            I also calculated the back angle with respect to the global vertical.
+            We are investigated the change in the back and shoulder flexion-extension
+            in terms of the angles, their timing, and also the coordination between back and shoulder.
+            The angles and results are visualized in the two bottom figures in the right panel.
           </p>
           <p>
             In this project, the participants were also equipped with commercial
@@ -552,13 +494,6 @@
 
           <b>This is an ongoing project.</b>
 
-          <p style="text-align: center; font-size: 17px">
-            Comparing the Standard Deviation in the Back and Shoulder Flexions
-            Between 1<sup>st</sup> and Last Sessions
-          </p>
-          <a href="./images/bar.png" data-lightbox="mygallery">
-            <img src="./images/bar.png" alt="" width="100%" />
-          </a>
         </div>
         <div class="proj-main-row6-right">
           <p style="text-align: center; font-size: 17px">
@@ -573,6 +508,13 @@
           </p>
           <a href="./images/gore.png" data-lightbox="mygallery">
             <img src="./images/gore.png" alt="" width="100%" />
+          </a>
+          <p style="text-align: center; font-size: 17px">
+            Comparing the Standard Deviation in the Back and Shoulder Flexions
+            Between 1<sup>st</sup> and Last Sessions
+          </p>
+          <a href="./images/bar.png" data-lightbox="mygallery">
+            <img src="./images/bar.png" alt="" width="100%" />
           </a>
         </div>
         <hr />
